@@ -1,0 +1,2 @@
+# Resgatando leitura
+ 
