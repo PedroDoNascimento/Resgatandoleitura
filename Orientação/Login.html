@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5; /* cor de fundo */
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-container h1 {
+            text-align: center;
+            color: #333; /* cor do título */
+            margin-bottom: 30px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .login-container button {
+            width: 100%;
+            background-color: cadetblue; /* cor do botão */
+            color: white; /* cor do texto do botão */
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #5f9ea0; /* cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <form id="formLogin">
+            <input type="text" id="username" name="username" placeholder="Usuário" required><br><br>
+            <input type="password" id="password" name="password" placeholder="Senha" required><br><br>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formLogin').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            // Verifica as credenciais (usuário e senha)
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulando uma verificação simples de usuário e senha
+            if (username === 'usuario' && password === '1') {
+                // Redireciona para a página de cadastro de livros
+                window.location.href = 'Cadastro.html';
+            } else {
+                alert('Usuário ou senha incorretos. Tente novamente.');
+            }
+        });
+    </script>
+</body>
+</html>
